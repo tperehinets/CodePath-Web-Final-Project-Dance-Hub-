@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.App header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.App li {
+  display: inline;
+  float: right;
+}
+
+.App li a{
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.App header{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffc9c9;
+}
+
+.App li a:hover{
+  background-color: #ffcbcb;
+}
