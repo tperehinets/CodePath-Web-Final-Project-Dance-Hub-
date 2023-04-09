@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Display from './Display';
 import Create from './Create';
 import Post from './Post';
+import Edit from './Edit';
+
 
 function App() {
   //set value for the search bar
@@ -24,7 +26,7 @@ function App() {
         <header>
           <h1>DanceHub</h1>
           <form>
-            <input type='text' className='searchbar' value={search} placeholder='Search' onChange={handleSearch}/>
+              <input type='text' className='searchbar' value={search} placeholder='Search' onChange={handleSearch}/>
           </form>
           <ul className='navbar'>
             <li><Link to='/'><a>Home</a></Link></li>
@@ -37,9 +39,10 @@ function App() {
       </div>
 
       <Routes>
-        <Route path='/' element={<Display/>}/>
+        <Route path='/' element={<Display search={search}/>}/>
         <Route path='/posts/:id' element={<Post/>}/>
         <Route path='/create' element={<Create/>}/>
+        <Route path='/edit/:id' element={<Edit/>}/>
 
       </Routes>
     </BrowserRouter>

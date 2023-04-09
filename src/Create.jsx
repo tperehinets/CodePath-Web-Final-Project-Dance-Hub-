@@ -7,7 +7,7 @@ export default function Create(){
     const [title, setTitle] = useState()
     const [comment, setComment] = useState()
     const [img, setImg] = useState()
-    const upvotes = 0
+
 
     //event handlers for the form 
     const handleTitle = (e) =>{
@@ -34,13 +34,12 @@ export default function Create(){
 
         await supabase
             .from('posts')
-            .insert({title: title, content: comment, img:img, upvotes:upvotes})
+            .insert({title: title, content: comment, img:img})
             .select();
 
             window.location = "/";
 
-            console.log(title, comment, img, upvotes)
-            alert("Post created")
+
     }
 
 
