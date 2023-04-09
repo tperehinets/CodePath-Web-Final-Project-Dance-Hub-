@@ -43,21 +43,21 @@ export default function Edit(){
                 .update({ title: title, content:comment, img:img})
                 .eq('id', post.id);
     
-        window.location = "/";
+        window.location = `/`;
 
 
     }
 
 
     return(
-        <div className='Edit'>
-            <form onSubmit={updatePost}>
+        
+            <form onSubmit={updatePost} className='Edit'>
                 <input placeholder='Title' value={title} onChange={handleTitle}/>
-                <input placeholder='Comment (Optional)' value={comment} onChange={handleComment}/>
+                <input placeholder='Comment (Optional)' value={comment} onChange={handleComment} className='comment'/>
                 <input placeholder='Image url (Optional)' value={img} onChange={handleImg}/>
-                <input type="submit" placeholder='Update Post'/>
+                <input type="submit" className='submit' value='Update Post'/>
             </form>
 
-        </div>
+       
     )
 }

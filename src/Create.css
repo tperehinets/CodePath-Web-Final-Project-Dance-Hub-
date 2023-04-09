@@ -1,0 +1,33 @@
+.Create{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bolder;
+    
+}
+
+.Create input{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    border:none;
+    font-size: 1rem;
+}
+
+.Create .comment{
+    height: 15rem;
+}
+
+.Create .submit{
+    float: left;
+    background-color: #2E8B57;
+    width: fit-content;
+    color: aliceblue;
+    font-family:'Montserrat', sans-serif;
+
+}

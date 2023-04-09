@@ -1,0 +1,43 @@
+.Post{
+    padding: 3%;
+    background-color: #f2f2f2;
+    float: center;
+    
+
+}
+
+.post-container{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding-left: 2%;
+    
+    
+    
+
+}
+
+.post-container img{
+    padding: 10px;
+    max-width: 50%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.upvotes{
+    display: flex;
+}
+
+.Post .buttons img{
+    width:2rem;
+    height: 2.2rem;
+}
+
+.Post .buttons button{
+    border: none;
+    padding-top: 10px;
+}

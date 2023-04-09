@@ -29,8 +29,6 @@ export default function Comment(props){
         //change comment with a form
         const handleComment = async (event) =>{
             event.preventDefault()
-            
-    
             //submit comment with Enter API
             if(event.code === "Enter" || event.code === "NumpadEnter"){
                 await supabase
@@ -58,7 +56,7 @@ export default function Comment(props){
         <div className='Comment'>
             <div className='comments-container'>
                 <form>
-                    <input type='text' placeholder='Enter your comment here' value={comment} onChange={handleComment}/>
+                    <input type='text' placeholder='Leave a comment....' value={comment} onChange={handleComment}/>
                 </form>
                 {comments?.map((com)=>{
                     return(

@@ -44,11 +44,11 @@ export default function Create(){
 
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='Create'>
             <input placeholder='Title' value={title} onChange={handleTitle}/>
-            <input placeholder='Comment (Optional)' value={comment} onChange={handleComment}/>
+            <input placeholder='Comment (Optional)' value={comment} onChange={handleComment} className='comment'/>
             <input placeholder='Image url (Optional)' value={img} onChange={handleImg}/>
-            <input type="submit"/>
+            <input type="submit" className='submit' value='Create Post'/>
 
         </form>
     )

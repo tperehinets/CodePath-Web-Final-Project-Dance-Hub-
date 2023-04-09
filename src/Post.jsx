@@ -47,7 +47,7 @@ export default function Post(){
 
 
     return(
-        <div>
+        <div className='Post'>
             <div className='post-container'>
                 <p>Posted {diff_minutes} minutes ago</p>
                 <h1>{post.title}</h1>
@@ -56,15 +56,17 @@ export default function Post(){
             </div>
             <div className='buttons'>
                 <div className='upvotes'>
-                    <button onClick={addUpvotes}>Upvote</button>
-                    <p>{upvotes} upvotes</p>
+                    <button onClick={addUpvotes}><img src='https://i.pinimg.com/originals/17/dc/d0/17dcd0573cf56ceefa6ed03b028ded0e.png'/></button>
+                    <p>{upvotes}</p>
                 </div>
                 <div className='edit-post'>
-                    <Link to={`/edit/${post.id}`} state={post}><button>Edit</button></Link>
-                    <button onClick={deletePost}>Delete</button>
+                    <Link to={`/edit/${post.id}`} state={post}><button><img src='https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1f58b.png'/></button></Link>
+                    <button onClick={deletePost}><img src='https://static-00.iconduck.com/assets.00/delete-emoji-409x512-y77jpzk2.png'/></button>
                 </div>
+                
             </div>
             <Comment post_id={post.id}/>
+            
 
         </div>
     )

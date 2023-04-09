@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family:'Montserrat', sans-serif;
+  
+  
 }
 
 .App header{
@@ -10,12 +13,17 @@
 .App li {
   display: inline;
   float: right;
+  
 }
 
 .App li a{
   display: block;
   padding: 8px;
-  background-color: #dddddd;
+  text-decoration: none;
+  color: aliceblue;
+  
+  
+  
 }
 
 .App header{
@@ -23,9 +31,29 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ffc9c9;
+  background-color: 	#2E8B57;
 }
 
 .App li a:hover{
-  background-color: #ffcbcb;
+  text-decoration-line: #006400;
+  text-decoration: underline;
+
 }
+
+.App header h1{
+  color:aliceblue;
+  margin-left: 3%;
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+
+.App header{
+  align-items: center;
+}
+
+.App header input{
+  border-radius: 10px;
+  width: 14rem;
+  height: 1.3rem;
+}
+

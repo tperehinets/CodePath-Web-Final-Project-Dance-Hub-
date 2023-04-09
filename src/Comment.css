@@ -1,0 +1,18 @@
+.Comment input{
+    width:35%;
+    border-radius: 3px;
+    border: none;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.comment-container{
+    background-color: white;
+    margin-top: 20px;
+    padding: 5px;
+    width:35%;
+}
+
+.Comment{
+    font-family:'Montserrat', sans-serif;
+}

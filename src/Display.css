@@ -1,0 +1,74 @@
+.order-container{
+    font-size: large;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+   
+    
+
+}
+
+.order-container button{
+    text-align: center; 
+    border-radius: 5px;
+    border: none;
+    background-color: #2E8B57;
+    color: aliceblue;
+    margin-left: 10px;
+    font-size: 15px;
+    height: 1.5rem;
+
+}
+
+.mini-container{
+    background-color: rgb(255, 255, 255); 
+    margin-bottom: 25px;   
+     
+
+}
+
+.active-link{
+    text-decoration: none;
+    color: black;
+   
+    
+    
+}
+
+.active-link p{
+    margin-left: 10px;  
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: 30%;
+        
+}
+
+.active-link  .upvotes{
+    padding-bottom: 15px;
+}
+
+.active-link  .time{
+    padding-top: 15px;
+}
+
+.active-link h1{
+    margin-left: 10px;  
+    font-size: 1.35rem;
+    font-family: Arial;
+}
+
+.order-container button:active{
+    background-color: #006400;
+
+
+}
+
+.Display{
+    font-family:'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+        
+}
+
+.posts-container{
+    margin: 3%;
+}

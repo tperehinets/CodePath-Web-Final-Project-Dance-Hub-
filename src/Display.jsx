@@ -52,7 +52,7 @@ export default function Display(props){
 
 
     return(
-        <div>
+        <div className='Display'>
             <div className='order-container'>
                 <p>Order by:</p>
                 <button onClick={createdAt}>Newest</button>
@@ -61,16 +61,32 @@ export default function Display(props){
             <div className='posts-container'>
                 
                     {posts?.map((post) => {
+                        if(search){
                         if(post.title.includes(search)){
                         return(
-                            <div className='mini-container'>
-                                <Link to={`/posts/${post.id}`} state={post} >
-                                <p>Posted {Math.round(Math.abs(new Date()-new Date(post.created_at))/60000)} minutes ago</p>
-                                <h1>{post.title}</h1>
-                                <p>{post.upvotes}</p>
+                            
+                                <Link to={`/posts/${post.id}`} state={post} className="active-link">
+                                    <div className='mini-container'>
+                                    <p className='time'>Posted {Math.round(Math.abs(new Date()-new Date(post.created_at))/60000)} minutes ago</p>
+                                    <h1>{post.title}</h1>
+                                    <p className='upvotes'>{post.upvotes} upvotes</p>
+                                    </div>
                                 </Link>
-                            </div>
+                            
                         )}
+                        }else{
+                            return(
+                            
+                                <Link to={`/posts/${post.id}`} state={post} className="active-link">
+                                    <div className='mini-container'>
+                                    <p className='time'>Posted {Math.round(Math.abs(new Date()-new Date(post.created_at))/60000)} minutes ago</p>
+                                    <h1>{post.title}</h1>
+                                    <p className='upvotes'>{post.upvotes} upvotes</p>
+                                    </div>
+                                </Link>
+                            
+                        )
+                        }
                     })}
                 
 
