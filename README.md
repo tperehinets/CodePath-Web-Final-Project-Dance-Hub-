@@ -24,8 +24,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Users can upload images directly from their local machine as an image file
-- [ ] Display a loading animation whenever data is being fetched
+- [X] Users can upload images directly from their local machine as an image file
 
 ## Video Walkthrough
 
