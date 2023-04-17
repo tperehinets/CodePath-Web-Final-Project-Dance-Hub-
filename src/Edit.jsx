@@ -1,19 +1,40 @@
 import './Edit.css'
-import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { supabase } from './client'
 
 export default function Edit(){
-    //save a post data the is referred through the link
-    const location = useLocation()
-    const post = location.state
+    //get the id of a post that's being edited
+    const {id} = useParams()
 
-
+    //get posts data
+    const [post, setPost] = useState()
+    
     //save data about the post
-    const [title, setTitle] = useState(post.title)
-    const [comment, setComment] = useState(post.content)
-    const [img, setImg] = useState(post.img)
+    const [title, setTitle] = useState()
+    const [comment, setComment] = useState()
+    const [img, setImg] = useState()
 
+
+    const getPost= async ()=>{
+        const {data} = await supabase
+                            .from('posts')
+                            .select()
+                            .eq("id", id)
+                            
+        setPost(data[0])
+        setTitle(data[0].title)
+        setComment(data[0].content)
+        setImg(data[0].img)
+    }
+
+    //get post's data when the component is rendered
+    useEffect(()=>{
+        getPost()
+    }, [])
+
+
+    
 
     //event handlers for the form 
     const handleTitle = (e) =>{
@@ -41,9 +62,9 @@ export default function Edit(){
         await supabase
                 .from('posts')
                 .update({ title: title, content:comment, img:img})
-                .eq('id', post.id);
+                .eq('id', id);
     
-        window.location = `/`;
+        window.location = `/posts/${id}`;
 
 
     }

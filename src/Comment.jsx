@@ -7,6 +7,9 @@ export default function Comment(props){
         //comments section to create new comment
         const [comment, setComment] = useState('')
 
+        // if submit a new comment
+        const [submit, setSubmit] = useState(false)
+
 
         //save the id of the post that will be related to this comment
         const post_id = props.post_id
@@ -27,36 +30,36 @@ export default function Comment(props){
 
 
         //change comment with a form
-        const handleComment = async (event) =>{
+        const handleComment = (event) =>{
+            event.preventDefault()            
+            setComment(event.target.value)
+    
+        }
+
+        const onSubmit = async (event)=>{
             event.preventDefault()
-            //submit comment with Enter API
-            if(event.code === "Enter" || event.code === "NumpadEnter"){
-                await supabase
-                    .from('comments')
-                    .insert({post_id:post_id, text:comment})
-                    .select();
+            console.log("Submitting comment")
+            await supabase
+                .from('comments')
+                .insert({post_id:post_id, text:comment})
+                .select();
 
-                    window.location('/')
+            setSubmit(true)
 
-                //get all comments again
-                getComments()
-    
-            }else{
-                setComment(event.target.value)
-            }
-    
         }
 
         useEffect(()=>{
             getComments()
-        }, [])
+            setSubmit(false)
+        }, [submit])
 
 
     return(
         <div className='Comment'>
             <div className='comments-container'>
-                <form>
+                <form onSubmit={onSubmit}>
                     <input type='text' placeholder='Leave a comment....' value={comment} onChange={handleComment}/>
+                    <input type='submit'/>
                 </form>
                 {comments?.map((com)=>{
                     return(

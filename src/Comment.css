@@ -16,3 +16,7 @@
 .Comment{
     font-family:'Montserrat', sans-serif;
 }
+
+.Comment input{
+    display: inline;
+}

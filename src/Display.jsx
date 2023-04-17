@@ -22,6 +22,8 @@ export default function Display(props){
         console.log(posts)
     }
 
+    console.log(posts)
+
     //call the API once the page is rendered
     useEffect(()=>{
         getPosts()
