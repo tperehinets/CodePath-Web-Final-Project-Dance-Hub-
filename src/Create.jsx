@@ -28,6 +28,16 @@ export default function Create(){
 
     }
 
+    // upload image from computer
+    const handleImageUpload = (event) => {
+        const selectedImage = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+          setImg(reader.result);
+        };
+        reader.readAsDataURL(selectedImage);
+      };
+
     //API call to add post to the database
     const handleSubmit = async (event)=>{
         event.preventDefault();
@@ -48,6 +58,7 @@ export default function Create(){
             <input placeholder='Title' value={title} onChange={handleTitle}/>
             <input placeholder='Comment (Optional)' value={comment} onChange={handleComment} className='comment'/>
             <input placeholder='Image url (Optional)' value={img} onChange={handleImg}/>
+            <input type="file" onChange={handleImageUpload} />
             <input type="submit" className='submit' value='Create Post'/>
 
         </form>
