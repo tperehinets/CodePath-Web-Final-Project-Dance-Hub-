@@ -1,10 +1,8 @@
-# Web Development Project 8 - *DanceHub*
+# Web Development Final Project - *DanceHub*
 
 Submitted by: **Tetiana Perehinets**
 
-This web app: **Forum, where dancers can discuss their favourite movements**
-
-Time spent: **X** hours spent in total
+This web app: **is a forum for dances with options to post, edit, and share their posts**
 
 ## Required Features
 
@@ -21,10 +19,6 @@ The following **required** functionality is completed:
 - [X] **Users can leave comments underneath a post on the post's separate page**
 - [X] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
 - [X] **A previously created post can be edited or deleted from its post page**
-
-The following **optional** features are implemented:
-
-- [X] Users can upload images directly from their local machine as an image file
 
 ## Video Walkthrough
 
